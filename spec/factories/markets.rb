@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :market do
-    name { Faker::Hacker.say_something_smart }
+    name { Faker::Hipster.word.capitalize + " " + Faker::Hipster.word.capitalize + " Market" }
     street { Faker::Address.street_address }
     city { Faker::Address.city }
-    country { Faker::Address.country }
+    county { Faker::Dessert.topping }
     state { Faker::Address.state }
     zip { Faker::Address.zip }
     lat { Faker::Address.latitude }
