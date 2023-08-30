@@ -23,7 +23,15 @@ class Api::V0::VendorsController < ApplicationController
     end
   end
 
-  
+  def update
+    begin
+      render json: VendorSerializer.new(Vendor.update!(params[:id], vendor_params)), status: :accepted
+    rescue ActiveRecord::RecordInvalid => error
+      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :bad_request
+    rescue ActiveRecord::RecordNotFound => error
+      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_acceptable
+    end
+  end
 
   private
 
