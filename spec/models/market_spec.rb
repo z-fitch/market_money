@@ -13,7 +13,6 @@ describe Market, type: :model do
   describe 'instance methods' do
     before :each do
       @market = create(:market)
-
       @vendor_1 = create(:vendor)
       @vendor_2 = create(:vendor)
       @vendor_3 = create(:vendor)
