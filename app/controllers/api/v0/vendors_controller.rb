@@ -16,6 +16,18 @@ class Api::V0::VendorsController < ApplicationController
   end
 
   def create
+    begin
+      render json: VendorSerializer.new(Vendor.create!(vendor_params)), status: :created
+    rescue ActiveRecord::RecordInvalid => error
+      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :bad_request
+    end
+  end
 
+  
+
+  private
+
+  def vendor_params
+    params.require(:vendor).permit(:name, :description, :contact_phone, :contact_name, :credit_accepted)
   end
 end
