@@ -33,6 +33,15 @@ class Api::V0::VendorsController < ApplicationController
     end
   end
 
+  def destroy
+    begin
+      Vendor.find(params[:id])
+      render json: Vendor.delete(Vendor.find(params[:id])), status: :no_content
+    rescue ActiveRecord::RecordNotFound => error
+      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_found
+    end
+  end
+
   private
 
   def vendor_params
