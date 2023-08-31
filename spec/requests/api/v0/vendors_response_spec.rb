@@ -422,4 +422,36 @@ describe 'Vendors' do
       end
     end
   end
+
+  describe 'delete a vendor' do 
+    it 'can successfully delete the vendor' do 
+      vendor_1 = create(:vendor)
+
+      expect(Vendor.count).to eq(1)
+
+      delete "/api/v0/vendors/#{vendor_1.id}"
+
+      expect(response).to be_successful
+      expect(response).to have_http_status(204)
+
+      expect(Vendor.count).to eq(0)
+      expect{Vendor.find(vendor_1.id)}.to raise_error(ActiveRecord::RecordNotFound)
+    end
+
+    it 'can Unsuccessfully delete the vendor' do 
+      id = '1231234124'
+
+      expect(Vendor.count).to eq(0)
+
+      delete "/api/v0/vendors/#{id}"
+
+      expect(response).to have_http_status(404)
+      expect(Vendor.count).to eq(0)
+      
+      error_message = JSON.parse(response.body, symbolize_names: true)
+      
+      expect{Vendor.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
+      expect(error_message[:errors].first[:detail]).to eq("Couldn't find Vendor with 'id'=#{id}")
+    end
+  end
 end
