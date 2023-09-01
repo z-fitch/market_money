@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.tomtom.com/search/2/nearbySearch/.json?categorySet=7397&key=f8bRZr9idyxnAKHtyDhUwT4fkOx5A4xw&lat=32.779167&lon=-96.808891
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 01 Sep 2023 00:09:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Tracking-Id:
+      - bee821f1-eba5-42e4-bf99-1cfae880f0ab
+      Access-Control-Expose-Headers:
+      - Tracking-ID
+      X-Apigee.target-Latency:
+      - '57'
+      X-Envoy-Upstream-Service-Time:
+      - '74'
+      Server:
+      - tomtom
+      X-Tomtom-Processed-By:
+      - eastus
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"summary":{"queryType":"NEARBY","queryTime":54,"numResults":10,"offset":0,"totalResults":10,"fuzzyLevel":1,"geoBias":{"lat":32.779167,"lon":-96.808891},"geobiasCountry":"US"},"results":[{"type":"POI","id":"E3PZiOic0q1TK20WM8mLPw","score":99.9292907715,"dist":70.702651,"info":"search:ta:840489004170197-US","poi":{"name":"Cardtronics","brands":[{"name":"Cardtronics"}],"categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"411","streetName":"Elm Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3308","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"411 Elm Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.779637,"lon":-96.808381},"viewport":{"topLeftPoint":{"lat":32.78054,"lon":-96.80945},"btmRightPoint":{"lat":32.77874,"lon":-96.80731}},"entryPoints":[{"type":"minor","position":{"lat":32.78009,"lon":-96.80827}},{"type":"main","position":{"lat":32.7795,"lon":-96.80812}},{"type":"minor","position":{"lat":32.77958,"lon":-96.80806}}]},{"type":"POI","id":"AtTOapD55mEyj5yFc5otBQ","score":99.8988723755,"dist":101.116159,"info":"search:ta:840489004575302-US","poi":{"name":"ATM","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"504","streetName":"Elm Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3304","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"504 Elm Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.77946,"lon":-96.807867},"viewport":{"topLeftPoint":{"lat":32.78036,"lon":-96.80894},"btmRightPoint":{"lat":32.77856,"lon":-96.8068}},"entryPoints":[{"type":"main","position":{"lat":32.77968,"lon":-96.80756}}]},{"type":"POI","id":"lZbHKGagHNlBjT8G7CH5LA","score":99.856300354,"dist":143.696741,"info":"search:ta:840489006518221-US","poi":{"name":"ATM
+        at Automated Financial","categorySet":[{"id":7397}],"categories":["cash dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"211","streetName":"North Record
+        Street","municipalitySubdivision":"Downtown Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3313","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"211 North Record Street,
+        Dallas, TX 75202","localName":"Dallas"},"position":{"lat":32.780044,"lon":-96.807762},"viewport":{"topLeftPoint":{"lat":32.78094,"lon":-96.80883},"btmRightPoint":{"lat":32.77914,"lon":-96.80669}},"entryPoints":[{"type":"main","position":{"lat":32.78015,"lon":-96.80731}}]},{"type":"POI","id":"kfdpJTfIcSodozAM33gLJw","score":99.856086731,"dist":143.910434,"info":"search:ta:840489003985168-US","poi":{"name":"ATM
+        at Bank One","categorySet":[{"id":7397}],"categories":["cash dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"500","streetName":"Main Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3521","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"500 Main Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.778825,"lon":-96.807406},"viewport":{"topLeftPoint":{"lat":32.77972,"lon":-96.80848},"btmRightPoint":{"lat":32.77793,"lon":-96.80634}},"entryPoints":[{"type":"main","position":{"lat":32.77891,"lon":-96.80743}}]},{"type":"POI","id":"E-pA52riYC9iwyqKPSwyRw","score":99.8508453369,"dist":149.151181,"info":"search:ta:840489004403506-US","poi":{"name":"ATM
+        at Dallas County Records Building","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"509","streetName":"Main Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3521","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"509 Main Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.77884,"lon":-96.807344},"viewport":{"topLeftPoint":{"lat":32.77974,"lon":-96.80841},"btmRightPoint":{"lat":32.77794,"lon":-96.80627}},"entryPoints":[{"type":"main","position":{"lat":32.77893,"lon":-96.80737}}]},{"type":"POI","id":"RYzJ4rShPFav_VIVPnTMZA","score":99.8346862793,"dist":165.309429,"info":"search:ta:840489004553145-US","poi":{"name":"ATM","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"100","streetName":"South Houston
+        Street","municipalitySubdivision":"Downtown Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"100 South Houston Street,
+        Dallas, TX 75202","localName":"Dallas"},"position":{"lat":32.778534,"lon":-96.807291},"viewport":{"topLeftPoint":{"lat":32.77943,"lon":-96.80836},"btmRightPoint":{"lat":32.77763,"lon":-96.80622}},"entryPoints":[{"type":"main","position":{"lat":32.77845,"lon":-96.8077}}]},{"type":"POI","id":"o8nIQu6W8G97GChEkNomJg","score":99.7295455933,"dist":270.454404,"info":"search:ta:840489004553866-US","poi":{"name":"ATM","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"514","streetName":"Jackson Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-4503","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"514 Jackson Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.777249,"lon":-96.807112},"viewport":{"topLeftPoint":{"lat":32.77815,"lon":-96.80818},"btmRightPoint":{"lat":32.77635,"lon":-96.80604}},"entryPoints":[{"type":"main","position":{"lat":32.7774,"lon":-96.8072}}]},{"type":"POI","id":"qPGLxHhsl2_vVnYNJSz0aQ","score":99.7196121216,"dist":280.382826,"info":"search:ta:840489008211985-US","poi":{"name":"Metabank","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"302","streetName":"South Houston
+        Street","municipalitySubdivision":"Downtown Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-4706","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"302 South Houston Street,
+        Dallas, TX 75202","localName":"Dallas"},"position":{"lat":32.777183,"lon":-96.80704},"viewport":{"topLeftPoint":{"lat":32.77808,"lon":-96.80811},"btmRightPoint":{"lat":32.77628,"lon":-96.80597}},"entryPoints":[{"type":"main","position":{"lat":32.77711,"lon":-96.80731}}]},{"type":"POI","id":"RfU9jR3hYJors37ZKDfoUQ","score":99.713470459,"dist":286.52896,"info":"search:ta:840489001958132-US","poi":{"name":"Bank
+        of America Dallas","phone":"+1 844-401-8500","brands":[{"name":"Bank of America"}],"categorySet":[{"id":7397}],"url":"locators.bankofamerica.com/tx/dallas/atm-dallas-102697.html","categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"600","streetName":"Commerce Street","municipalitySubdivision":"Downtown
+        Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-4600","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"600 Commerce Street, Dallas,
+        TX 75202","localName":"Dallas"},"position":{"lat":32.777966,"lon":-96.80618},"viewport":{"topLeftPoint":{"lat":32.77887,"lon":-96.80725},"btmRightPoint":{"lat":32.77707,"lon":-96.80511}},"entryPoints":[{"type":"main","position":{"lat":32.77838,"lon":-96.80631}},{"type":"main","position":{"lat":32.77838,"lon":-96.80629}}]},{"type":"POI","id":"sIFm95qlhur1tsNShiL33A","score":99.702003479,"dist":297.994734,"info":"search:ta:840489007990211-US","poi":{"name":"ATM","categorySet":[{"id":7397}],"categories":["cash
+        dispenser"],"classifications":[{"code":"CASH_DISPENSER","names":[{"nameLocale":"en-US","name":"cash
+        dispenser"}]}]},"address":{"streetNumber":"208","streetName":"North Market
+        Street","municipalitySubdivision":"Downtown Dallas","municipality":"Dallas","countrySecondarySubdivision":"Dallas","countrySubdivision":"TX","countrySubdivisionName":"Texas","postalCode":"75202","extendedPostalCode":"75202-3202","countryCode":"US","country":"United
+        States","countryCodeISO3":"USA","freeformAddress":"208 North Market Street,
+        Dallas, TX 75202","localName":"Dallas"},"position":{"lat":32.780535,"lon":-96.80615},"viewport":{"topLeftPoint":{"lat":32.78143,"lon":-96.80722},"btmRightPoint":{"lat":32.77964,"lon":-96.80508}},"entryPoints":[{"type":"main","position":{"lat":32.78046,"lon":-96.80642}}]}]}'
+  recorded_at: Fri, 01 Sep 2023 00:09:16 GMT
+recorded_with: VCR 6.2.0
