@@ -3,7 +3,7 @@ class Api::V0::VendorsController < ApplicationController
     begin
       render json: VendorSerializer.new(Market.find(params[:market_id]).vendors)
     rescue ActiveRecord::RecordNotFound => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_found
+      render json: ErrorSerializer.new(error).format_errors, status: :not_found
     end
   end
 
@@ -11,7 +11,7 @@ class Api::V0::VendorsController < ApplicationController
     begin
       render json: VendorSerializer.new(Vendor.find(params[:id]))
     rescue ActiveRecord::RecordNotFound => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_found
+      render json: ErrorSerializer.new(error).format_errors, status: :not_found
     end
   end
 
@@ -19,7 +19,7 @@ class Api::V0::VendorsController < ApplicationController
     begin
       render json: VendorSerializer.new(Vendor.create!(vendor_params)), status: :created
     rescue ActiveRecord::RecordInvalid => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :bad_request
+      render json: ErrorSerializer.new(error).format_errors, status: :bad_request
     end
   end
 
@@ -27,9 +27,9 @@ class Api::V0::VendorsController < ApplicationController
     begin
       render json: VendorSerializer.new(Vendor.update!(params[:id], vendor_params)), status: :accepted
     rescue ActiveRecord::RecordInvalid => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :bad_request
+      render json: ErrorSerializer.new(error).format_errors, status: :bad_request
     rescue ActiveRecord::RecordNotFound => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_acceptable
+      render json: ErrorSerializer.new(error).format_errors, status: :not_acceptable
     end
   end
 
@@ -38,7 +38,7 @@ class Api::V0::VendorsController < ApplicationController
       Vendor.find(params[:id])
       render json: Vendor.delete(Vendor.find(params[:id])), status: :no_content
     rescue ActiveRecord::RecordNotFound => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: :not_found
+      render json: ErrorSerializer.new(error).format_errors, status: :not_found
     end
   end
 

@@ -4,20 +4,20 @@ class Api::V0::MarketVendorsController < ApplicationController
       render json: MarketVendor.create!(mv_params), status: 201
     rescue ActiveRecord::RecordInvalid => error
       if params[:market_vendor][:market_id]  == "" || nil
-        render json: ErrorMemberSerializer.new(error).not_found_errors, status: 400
+        render json: ErrorSerializer.new(error).format_errors, status: 400
       elsif params[:market_vendor][:vendor_id]  == "" || nil
-        render json: ErrorMemberSerializer.new(error).not_found_errors, status: 400
+        render json: ErrorSerializer.new(error).format_errors, status: 400
       else
-        render json: ErrorMemberSerializer.new(error).not_found_errors, status: 404
+        render json: ErrorSerializer.new(error).format_errors, status: 404
       end
     rescue ActiveRecord::StatementInvalid => error
-      render json: ErrorMemberSerializer.new(error).not_found_errors, status: 422
+      render json: ErrorSerializer.new(error).format_errors, status: 422
     end
   end
 
   def destroy
     if MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id]).nil?
-      render json: ErrorMemberSerializer.new([params[:market_id], params[:vendor_id]]).no_assoociation_error, status: :not_found
+      render json: ErrorSerializer.new([params[:market_id], params[:vendor_id]]).no_association_error, status: :not_found
     else
       render json: MarketVendor.delete(MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id])), status: :no_content
     end

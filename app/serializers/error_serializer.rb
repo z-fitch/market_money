@@ -1,9 +1,9 @@
-class ErrorMemberSerializer
+class ErrorSerializer
   def initialize(error_object)
     @error_object = error_object
   end
 
-  def not_found_errors # ! Error formatting 
+  def format_errors
     {
       errors: [
         {
@@ -13,7 +13,7 @@ class ErrorMemberSerializer
     }
   end
 
-  def no_assoociation_error
+  def no_association_error
     {
       errors: [
         {
